@@ -1,13 +1,33 @@
 {
     "name": "ordello/teeplus",
     "description": "Teeplus for Ordello, via Laravel 5.5",
-    "type": "package",
+    "keywords": ["laravel", "theme", "layout", "asset", "widget", "twig"],
+    "homepage": "https://github.com/j4k3th3sn4ke/teeplus-5.5",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jake Marcotte",
             "email": "jake@ordello.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": ">=5.4.0",
+        "twig/twig": "1.x"
+    },
+    "require-dev": {
+        "illuminate/support": ">=5.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Teepluss\\Theme\\": "src/"
+        },
+        "classmap": [
+            "src/Exceptions.php"
+        ],
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev"
 }
